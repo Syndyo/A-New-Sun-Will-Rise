@@ -68,8 +68,8 @@ country_event = {
     title = "EVTNAME52803" #Border Conflicts
     desc = "EVTDESC52803"
     trigger = {
-        OR = { tag = QUE tag = SCO }
-        NOT = { AND = { AND = { OR = { tag = SCO tag = QUE } ai = no } ai = yes } }
+        OR = { tag = QUE THIS = { primary_culture = scottish } }
+        NOT = { AND = { AND = { OR = { tag = SCO tag = QUE } OR = { tag = ABA tag = QUE } ai = no } ai = yes } }
         has_country_flag = the_second_gold_rush
         NOT = { has_global_flag = greenland_border_conflicts }
     }
@@ -127,7 +127,7 @@ country_event = {
     title = "EVTNAME52805" #Border Conflicts
     desc = "EVTDESC52805"
     trigger = {
-        tag = SCO
+        THIS = { primary_culture = scottish }
         has_global_flag = greenland_border_conflicts
         has_country_flag = greenland_border_conflicts
         NOT = { OR = { has_global_flag = greenland_border_escalation has_global_flag = greenland_border_descalation } }
@@ -190,7 +190,7 @@ country_event = {
     title = "EVTNAME52808"
     desc = "EVTDESC52808"
     trigger = {
-        tag = SCO
+        THIS = { primary_culture = scottish }
         1541 = {owned_by = THIS }
         1570 = {owned_by = THIS }
         NOT = { has_country_flag = greenhome }
